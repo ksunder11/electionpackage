@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
-	html5up.net | @ajlkn
+	html5up.net | @ajlknsadfsd
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
@@ -41,45 +41,58 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#asdf">National</a></li>
+							<li><a href="generic.html">State</a></li>
+							<li><a href="generic.html">Local</a></li>
+							<li><a href="#wrapper">Back to Top</a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<container class="fill">
-								<img src="https://placehold.it/1900x400">
-							</container>
-							
+							<header>
+								<h1>Election Package</h1>
+								<p>i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image i need a header image  </p>
+							</header>
+
 							<section class="tiles">
-								<article class="style1">
+								<article class="full">
 									<span class="image">
 										<img src="http://www.elestoque.org/wp-content/uploads/2016/10/p1240002.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Political bias in media coverage of 2016 presidential election</h2>
-										<div class="content state">
+										<!-- links to story -->
+									</a>
+								</article>
+								<!--
+								red: #C10000 style3
+								blue: #00A5FF style1
+								white: #FFFFFF style2
+								-->
+								<article class="style3 half">
+									<span class="image">
+										<img src="http://www.elestoque.org/wp-content/uploads/2016/10/p1240002.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2 style="color: #FFFFFF">Political bias in media coverage of 2016 presidential election</h2>
+										<div class="content state" style="color: #FFFFFF">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style2">
+								<article class="style2 half">
 									<span class="image">
 										<img src="https://document-export.canva.com/DACCzYw8EUY/11/preview/0001-63878850.png" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Why you should read Fox News</h2>
-										<div class="content">
-											<p>Students at MV talk about how celebrities can influence political views.</p>
+										<h2 style="color: #C10000">Why you should read Fox News</h2>
+										<div class="content" style="color: #00A5FF">
+											<strong>Students at MV talk about how celebrities can influence political views.</strong>
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="third">
 									<span class="image">
 										<img src="http://www.elestoque.org/wp-content/uploads/2016/10/DEATH-PENALTY-BACKGROUND.png	" alt="" />
 									</span>
@@ -90,7 +103,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style4">
+								<article class="third">
 									<span class="image">
 										<img src="http://www.elestoque.org/wp-content/uploads/2016/10/katy_perry_hillary_clinton-_i-1.jpg" alt="" />
 									</span>
@@ -101,7 +114,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style5">
+								<article class="third">
 									<span class="image">
 										<img src="http://www.elestoque.org/wp-content/uploads/2016/10/emerald-palace.jpg" alt="" />
 									</span>
@@ -112,7 +125,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style6">
+								<article class="style6" id="asdf">
 									<span class="image">
 										<img src="https://c3.staticflickr.com/9/8110/8657039498_a1ddb92b5f_z.jpg" alt="" />
 									</span>
@@ -240,6 +253,17 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+				$('a[href^="#"]').on('click', function(event) {
+					var target = $(this.getAttribute('href'));
+					if( target.length ) {
+							event.preventDefault();
+							$('html, body').stop().animate({
+								scrollTop: target.offset().top
+							}, 1000);
+						}
+					});
+		  </script>
 
 	</body>
 </html>
